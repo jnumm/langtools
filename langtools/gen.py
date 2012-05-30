@@ -33,6 +33,34 @@ SENTENCE_DECLARATIVE = "declarative"
 SENTENCE_INTERROGATIVE = "interrogative"
 SENTENCE_EXCLAMATORY = "exclamatory"
 
+SUPPORTED_LANGS = ["de", "et", "fi"]
+
+def generate_word(lang=RANDOM, word_type=RANDOM):
+    """Helper function for word generation
+    
+    This function calls the appropriate function for the selected
+    language. Language is a *nix locale-style (fi, en_US, pt_BR etc.)
+    code.
+    
+    If the language is not supported, a ValueError is raised.
+    """
+    
+    if lang == RANDOM:
+        lang = random.sample(_SUPPORTED_LANGS, 1)[0]
+    elif lang not in SUPPORTED_LANGS:
+        raise ValueError("language '{}' is not supported".format(lang))
+    assert lang in SUPPORTED_LANGS
+    
+    if lang == "de":
+        return generate_word_de(word_type=word_type)
+    elif lang == "et":
+        return generate_word_et(word_type=word_type)
+    elif lang == "fi":
+        return generate_word_fi(word_type=word_type)
+    
+    # This should never get executed, assertion just to be sure.
+    assert True == False
+
 def generate_word_de(word_type=RANDOM):
     """Generate a word which souds a bit German.
     
