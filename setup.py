@@ -8,7 +8,7 @@ setup(name="langtools",
         author_email="juhaninumminen0@gmail.com",
         url="https://github.com/jnumm/langtools",
         description="Natural language tools library",
-        long_description=open("README").read(),
+        long_description=open("README.rst").read(),
         classifiers=[
             "Intended Audience :: Developers",
             "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
