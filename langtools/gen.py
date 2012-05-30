@@ -46,7 +46,7 @@ def generate_word(lang=RANDOM, word_type=RANDOM):
     """
     
     if lang == RANDOM:
-        lang = random.sample(_SUPPORTED_LANGS, 1)[0]
+        lang = random.sample(SUPPORTED_LANGS, 1)[0]
     elif lang not in SUPPORTED_LANGS:
         raise ValueError("language '{}' is not supported".format(lang))
     assert lang in SUPPORTED_LANGS
