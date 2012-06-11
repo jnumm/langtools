@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 # Copyright (C) 2012 Juhani Numminen <juhaninumminen0@gmail.com>
 # License: GNU GPL v3+
 
